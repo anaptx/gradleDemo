@@ -1,0 +1,42 @@
+server:
+  port: 8081
+  tomcat:
+    accesslog:
+      enabled: true
+    basedir: ./
+  compression:
+    enabled: true
+    mime-types: application/json
+    min-response-size: 2048
+  servlet:
+    context-path: /dplm
+spring:
+  profiles:
+    active: uat
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  main:
+    banner-mode: off
+  datasource:
+    data-username: root
+    data-password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dplm?serverTimezone=GMT%2b8&characterEncoding=utf8
+#mybatis:
+#  mapper-locations: classpath:com/example/demo/dao/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+#  type-aliases-package: com.example.demo.pojo  # 注意：对应实体类的路径
+#mybatis-plus:
+#  mapper-locations: classpath*:dao/*.xml
+xxl:
+  job:
+    admin:
+      addresses: http://10.8.154.53:8080/xxl-job-admin/
+    executor:
+      address:
+      ip: 10.8.154.53
+      appname: xxl-job-executor-sample
+      port: 9999
+      logpath: ./xxl-job/jobhandler
+      logretentiondays: -1
+    accessToken:

@@ -1,0 +1,4 @@
+127.0.0.1 - - [23/Jul/2020:10:18:29 +0800] "POST /xxl-job-admin/api/registry HTTP/1.1" 404 431
+127.0.0.1 - - [23/Jul/2020:10:18:59 +0800] "POST /xxl-job-admin/api/registry HTTP/1.1" 404 431
+127.0.0.1 - - [23/Jul/2020:10:18:59 +0800] "POST /xxl-job-admin/api/registry HTTP/1.1" 404 431
+10.8.154.53 - - [23/Jul/2020:15:46:13 +0800] "POST /dplm/run HTTP/1.1" 404 286
