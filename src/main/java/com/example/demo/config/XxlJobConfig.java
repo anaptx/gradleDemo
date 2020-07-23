@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * xxl-job config
- *
- * @author xuxueli 2017-04-28
+ * @author fengqian07
+ * @Description xxl-job config
+ * @date 2020/7/23 16:04
  */
 @Configuration
 @Slf4j
