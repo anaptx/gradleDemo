@@ -1,6 +1,9 @@
 package com.example.demo.service;
 
 import com.example.demo.pojo.SystemUser;
+import com.example.demo.pojo.VO.TitleVO;
+
+import java.util.List;
 
 /**
  * @author fengqian07
@@ -9,4 +12,6 @@ import com.example.demo.pojo.SystemUser;
  */
 public interface HelloService {
     SystemUser getUserInfo(String id);
+
+    List<String> getTitle();
 }
