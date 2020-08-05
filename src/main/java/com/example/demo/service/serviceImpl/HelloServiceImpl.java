@@ -5,6 +5,7 @@ import com.example.demo.dao.UserMapper;
 import com.example.demo.pojo.LogTest;
 import com.example.demo.pojo.SystemUser;
 import com.example.demo.service.HelloService;
+import com.example.demo.utils.QRCodeUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -37,5 +38,12 @@ public class HelloServiceImpl implements HelloService {
         List<String> strings = new ArrayList<>();
         title.forEach(t-> strings.add(t.getTitle().split("\"projectContractId\":\"")[1].split("\",\"projectContractName\":")[0]));
         return strings.stream().distinct().collect(Collectors.toList());
+    }
+
+    @Override
+    public String createQRCode(String url) throws Exception {
+        String path = "E:\\file\\" + System.currentTimeMillis() + ".jpg";
+        QRCodeUtil.encode(url,"C:\\Users\\fengqian07\\Desktop\\load.jpg",path,true);
+        return path;
     }
 }

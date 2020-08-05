@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import com.example.demo.pojo.SystemUser;
-import com.example.demo.pojo.VO.TitleVO;
 
 import java.util.List;
 
@@ -14,4 +13,6 @@ public interface HelloService {
     SystemUser getUserInfo(String id);
 
     List<String> getTitle();
+
+    String createQRCode(String url) throws Exception;
 }

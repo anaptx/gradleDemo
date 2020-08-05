@@ -2,10 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.pojo.SystemUser;
 import com.example.demo.service.HelloService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -29,5 +26,10 @@ public class HelloController {
     @GetMapping("title")
     public List<String> getTitle(){
         return helloService.getTitle();
+    }
+
+    @PostMapping("createQRCode")
+    public String createQRCode(String url) throws Exception {
+        return helloService.createQRCode(url);
     }
 }
