@@ -1,11 +1,13 @@
 package com.example.demo.controller;
 
+import com.example.demo.forest.ForestClient;
 import com.example.demo.pojo.SystemUser;
 import com.example.demo.service.HelloService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author fengqian07
@@ -17,6 +19,14 @@ import java.util.List;
 public class HelloController {
     @Resource
     private HelloService helloService;
+
+    @Resource
+    private ForestClient forestClient;
+
+    @GetMapping("forest")
+    public Map forestTest(){
+        return forestClient.getLocation("121.475078", "31.223577");
+    }
 
     @GetMapping("info/{id}")
     public SystemUser getUserInfo(@PathVariable("id") String id){

@@ -43,7 +43,7 @@ public class HelloServiceImpl implements HelloService {
     @Override
     public String createQRCode(String url) throws Exception {
         String path = "E:\\file\\" + System.currentTimeMillis() + ".jpg";
-        QRCodeUtil.encode(url,"C:\\Users\\fengqian07\\Desktop\\load.jpg",path,true);
+        QRCodeUtil.generateQRCodeImage(url, 350, 350, path);
         return path;
     }
 }
